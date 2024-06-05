@@ -7,6 +7,17 @@ import pandas as pd
 import re
 
 def getPrice(nome):
+    """
+    Funcao para pegar o preco no site https://books.toscrape.com/
+
+    Essa função pega no nome do livro e retorna o seu preço atual
+
+    Parameters:
+    nome (str): Nome do livro a ser consultado.
+
+    Returns:
+    int or float: Preço atual do livro.
+    """
     driver = webdriver.Chrome(options=chrome_options)
     site = 'https://books.toscrape.com/catalogue/category/books/classics_6/index.html'
     driver.get(site)

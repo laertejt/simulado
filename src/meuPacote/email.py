@@ -5,6 +5,21 @@ from email.mime.text import MIMEText
 # https://br.ajuda.yahoo.com/kb/Gerar-e-gerenciar-senhas-de-aplicativos-de-terceiros-sln15241.html
 
 def enviar_email(usuario, senha, destinatario, assunto, mensagem):
+     """
+    Funcao para enviar email pelo servidor do Yahoo
+
+    Essa função pega os dados e conecta no servidor Yahoo para enviar o email
+
+    Parameters:
+    usuario (str): usuário Yahoo válido
+    senha (str): senha do usuário Yahoo válida
+    destinatario (str): destinatario do email
+    assunto (str): titulo do email
+    mensagem (str): mensagem do email
+
+    Returns:
+    None: Sem retorno
+    """
     # Configurações do servidor SMTP do Yahoo
     servidor_smtp = 'smtp.mail.yahoo.com'
     porta = 587
